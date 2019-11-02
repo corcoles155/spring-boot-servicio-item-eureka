@@ -14,6 +14,16 @@ public class Producto {
 
     private Integer port;
 
+    public Producto() {
+    }
+
+    public Producto(Long id, String nombre, Double precio, Date createAt) {
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.createAt = createAt;
+    }
+
     public Long getId() {
         return id;
     }
