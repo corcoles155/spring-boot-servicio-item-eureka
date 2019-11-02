@@ -7,3 +7,5 @@ Intervienen los repos:
 - spring-boot-servicio-item-eureka
 - spring-boot-eureka-server
 - spring-boot-servicio-config-server
+
+Para actualizar componentes de Spring hay que marcarlos con la anotación @RefreshScope, añadir en el YAML la property management.endpoints.web.exposure. include: "*" y ejecutar curl -X POST http://localhost:8085/actuator/refresh
