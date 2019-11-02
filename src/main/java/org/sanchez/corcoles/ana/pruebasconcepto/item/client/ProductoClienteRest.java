@@ -21,6 +21,6 @@ public interface ProductoClienteRest {
     @PutMapping("/productos/{id}")
     Producto update(@PathVariable Long id, @RequestBody Producto producto);
 
-    @DeleteMapping("/productos")
+    @DeleteMapping("/productos/{id}")
     void delete(@PathVariable Long id);
 }
