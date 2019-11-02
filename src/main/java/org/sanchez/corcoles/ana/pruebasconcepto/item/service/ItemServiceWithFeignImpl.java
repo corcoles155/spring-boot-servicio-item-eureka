@@ -1,8 +1,8 @@
 package org.sanchez.corcoles.ana.pruebasconcepto.item.service;
 
+import org.sanchez.corcoles.ana.pruebasconcepto.commons.model.entity.Producto;
 import org.sanchez.corcoles.ana.pruebasconcepto.item.client.ProductoClienteRest;
 import org.sanchez.corcoles.ana.pruebasconcepto.item.model.Item;
-import org.sanchez.corcoles.ana.pruebasconcepto.item.model.Producto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

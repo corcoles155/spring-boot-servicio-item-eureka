@@ -1,6 +1,6 @@
 package org.sanchez.corcoles.ana.pruebasconcepto.item.client;
 
-import org.sanchez.corcoles.ana.pruebasconcepto.item.model.Producto;
+import org.sanchez.corcoles.ana.pruebasconcepto.commons.model.entity.Producto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 

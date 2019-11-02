@@ -1,8 +1,8 @@
 package org.sanchez.corcoles.ana.pruebasconcepto.item.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import org.sanchez.corcoles.ana.pruebasconcepto.commons.model.entity.Producto;
 import org.sanchez.corcoles.ana.pruebasconcepto.item.model.Item;
-import org.sanchez.corcoles.ana.pruebasconcepto.item.model.Producto;
 import org.sanchez.corcoles.ana.pruebasconcepto.item.service.ItemService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,7 +50,7 @@ public class ItemController {
     }
 
     public Item metodoAlternativo(Long id, Integer cantidad) {
-        return new Item(new Producto(id, "Producto999", 500.00, new Date()), cantidad);
+        return new Item(new Producto("Producto999", 500.00, new Date()), cantidad);
     }
 
     @GetMapping("/obtener-config")

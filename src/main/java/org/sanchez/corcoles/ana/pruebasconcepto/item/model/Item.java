@@ -1,5 +1,7 @@
 package org.sanchez.corcoles.ana.pruebasconcepto.item.model;
 
+import org.sanchez.corcoles.ana.pruebasconcepto.commons.model.entity.Producto;
+
 public class Item {
 
     private Producto producto;
