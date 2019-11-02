@@ -2,8 +2,7 @@ package org.sanchez.corcoles.ana.pruebasconcepto.item.client;
 
 import org.sanchez.corcoles.ana.pruebasconcepto.item.model.Producto;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,4 +14,13 @@ public interface ProductoClienteRest {
 
     @GetMapping("/productos/{id}")
     Producto findBy(@PathVariable Long id);
+
+    @PostMapping("/productos")
+    Producto save(@RequestBody Producto producto);
+
+    @PutMapping("/productos/{id}")
+    Producto update(@PathVariable Long id, @RequestBody Producto producto);
+
+    @DeleteMapping("/productos")
+    void delete(@PathVariable Long id);
 }

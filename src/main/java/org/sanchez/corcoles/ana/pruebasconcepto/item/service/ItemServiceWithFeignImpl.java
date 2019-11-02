@@ -21,8 +21,23 @@ public class ItemServiceWithFeignImpl implements ItemService {
     }
 
     @Override
-    public Item findBy(Long id, Integer cantidad) {
+    public Item findBy(final Long id, final Integer cantidad) {
         final Producto producto = clienteFeign.findBy(id);
         return new Item(producto, cantidad);
+    }
+
+    @Override
+    public Producto save(final Producto producto) {
+        return clienteFeign.save(producto);
+    }
+
+    @Override
+    public Producto update(Long id, Producto producto) {
+        return clienteFeign.update(id, producto);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        clienteFeign.delete(id);
     }
 }
